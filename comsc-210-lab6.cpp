@@ -30,7 +30,7 @@ int main(){
 
 }
 
-//entryArrayData() populates an arr size = SIZE
+//enterArrayData() populates an arr size = SIZE
 //arguments: arr and SIZE
 //returns nothing (updates array)
 void enterArrayData(double* arr, int SIZE){
