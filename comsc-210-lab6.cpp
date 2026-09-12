@@ -30,15 +30,15 @@ int main(){
 
 }
 
-//Takes in array and size
-//Iterates using for loop
-//Inputs values using pointer notation
+//entryArrayData() populates an arr size = SIZE
+//arguments: arr and SIZE
+//returns nothing (updates array)
 void enterArrayData(double* arr, int SIZE){
     double val;
 
     cout << "Data entry for the array: " << endl;
     for(int i = 0; i < SIZE; i++){
-        cout << "\t> Element # " << i + 1 << ": ";
+        cout << "\t> Element #" << i << ": ";
         cin >> val;
         *(arr + i) = val;
     }
@@ -47,9 +47,9 @@ void enterArrayData(double* arr, int SIZE){
 
 }
 
-//Takes in array and size
-//iterates through for loop
-//Outputs elements
+//outputArrayData() outputs content in arr
+//arguments: arr and SIZE
+//returns nothing (outputs data)
 void outputArrayData(double* arr, int SIZE){
 
     cout << "Outputting array elements: ";
@@ -62,9 +62,9 @@ void outputArrayData(double* arr, int SIZE){
 
 }
 
-//Takes in arr and SIZE
-//Adds each value to sum
-//Returns sum to main
+//sumArray() finds sum of all elements in arr
+//arguments: arr and SIZE
+//returns sum
 double sumArray(double* arr, int SIZE){
     double sum = 0;
 
