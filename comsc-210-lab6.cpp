@@ -6,7 +6,7 @@ using namespace std;
 
 void enterArrayData(double* arr, int SIZE);
 void outputArrayData(double* arr, int SIZE);
-void sumArray(double* arr, int SIZE);
+double sumArray(double* arr, int SIZE);
 
 const int SIZE = 5;
 
@@ -18,6 +18,8 @@ int main(){
     enterArrayData(arr, SIZE);
 
     outputArrayData(arr, SIZE);
+
+    sumArray(arr, SIZE);
 
     delete [] arr;
 
@@ -35,7 +37,7 @@ void enterArrayData(double* arr, int SIZE){
     for(int i = 0; i < SIZE; i++){
         cout << "> Enter Double For Element #" << i + 1 << endl;
         cin >> val;
-        arr[i] = val;
+        *(arr + i) = val;
         arr++;   
     }
 
@@ -51,6 +53,14 @@ void outputArrayData(double* arr, int SIZE){
         cout << arr[i] << " ";
     }
 
+}
 
+double sumArray(double* arr, int SIZE){
+    double sum = 0;
 
+    for(int i = 0; i < SIZE; i++){
+        sum += *(arr + i);
+    }
+
+    return sum;
 }
