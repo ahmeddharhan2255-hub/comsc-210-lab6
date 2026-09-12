@@ -63,4 +63,5 @@ double sumArray(double* arr, int SIZE){
     }
 
     return sum;
+    
 }
