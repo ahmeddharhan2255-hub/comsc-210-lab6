@@ -20,7 +20,7 @@ int main(){
 
     outputArrayData(arr, SIZE);
 
-    cout << "Sum: " << sumArray(arr, SIZE) << endl;
+    cout << "Sum of values: " << sumArray(arr, SIZE) << endl;
 
     delete [] arr;
 
@@ -38,7 +38,7 @@ void enterArrayData(double* arr, int SIZE){
 
     cout << "Data entry for the array: " << endl;
     for(int i = 0; i < SIZE; i++){
-        cout << "> Enter Double For Element # " << i + 1 << " ";
+        cout << "\t> Element # " << i + 1 << ": ";
         cin >> val;
         *(arr + i) = val;
     }
@@ -52,7 +52,7 @@ void enterArrayData(double* arr, int SIZE){
 //Outputs elements
 void outputArrayData(double* arr, int SIZE){
 
-    cout << "Outputting array elements: " << endl;
+    cout << "Outputting array elements: ";
 
     for(int i = 0; i < SIZE; i++){
         cout << *(arr + i) << " ";
